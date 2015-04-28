@@ -67,6 +67,8 @@ nmap <leader>w :w!<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Always show current position
 set ruler
+set number
+set numberwidth=2
 
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
@@ -120,9 +122,10 @@ set ffs=unix,dos,mac
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Turn backup off, since most stuff is in SVN, git et.c anyway...
 set nobackup
-set nowb
+set nowritebackup
 set noswapfile
-
+set backupdir-=.
+set backupdir^=~/.vim/tmp
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
@@ -213,7 +216,7 @@ set viminfo^=%
 set laststatus=2
 
 " Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l,\ Col:\ %v
+set statusline=\ \[%l,%v\]\ %r%{getcwd()}%h
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

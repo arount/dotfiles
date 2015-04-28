@@ -217,7 +217,7 @@ set laststatus=2
 
 " Format the status line
 set statusline=\ \[%l,%v\]\ %r%{getcwd()}%h
-
+set showtabline=0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings

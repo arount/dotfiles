@@ -19,7 +19,7 @@ if [ "$TERM" != "dumb" ]; then
         fi
     }
     function _prompt_command() {
-        PS1="${debian_chroot:+($debian_chroot)}\[\033[01;38m\]\u@\h\[\033[00m\]:\[\033[01;33m\]\w\[\033[00m\]`_git_prompt`\$ "
+		PS1="\[\033[38;5;11m\]\T\[$(tput sgr0)\]\[\033[38;5;15m\] \u \[$(tput sgr0)\]\[\033[38;5;14m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\]`_git_prompt` \\$\[$(tput sgr0)\] "
     }
     PROMPT_COMMAND=_prompt_command
 fi

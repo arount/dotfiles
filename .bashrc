@@ -2,6 +2,7 @@
 #
 # GIT SHELL / COLORS
 #
+source ~/.git-prompt.sh
 if [ "$TERM" != "dumb" ]; then
     eval "`dircolors -b`"
    alias ls='ls --color=auto'
